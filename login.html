@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login-cadastro.css">
+    <title>BirdSound | Login</title>
+</head>
+<body>
+    <!-- Cabeçalho da página com um NAV-->
+    <header>
+        <nav>
+            <!-- Link que será como o logotipo ou lettering -->
+            <a href="./index.html" class="lettering">BirdSound</a>
+
+            <!-- Links de navegação -->
+            <div class="nav-links">
+                <a href="./produtos.html">Produtos</a>
+                <a href="./servicos.html">Serviços</a>
+                <a href="./login.html">Entrar</a>
+                <a href="./sobre.html">Sobre</a>
+                <a href="./carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <form id="login-form">
+            <div class="input-box">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="exemplo@endereco.com" required>
+            </div>
+
+            <div class="input-box">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Insira sua senha" required>
+                <i class="show-hide-password fa-solid fa-eye"></i>
+            </div>
+
+            <div class="checkinput-box">
+                <label for="lembrar">
+                    <input type="checkbox" id="lembrar"> Lembre de mim
+                </label>
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            <a href="#" class="form-link">Esqueci minha senha</a>
+            <p class="form-link">Ainda não é cadastrado? <a href="./cadastro.html">Faça seu cadastro</a></p>
+        </form>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Telefone:</p>
+        <p>Endereço: Av. Brasília, 162 - Campanário, Diadema - SP</p>
+        <p>Copyright &copy; 2025 BirdSound. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Futura.</p>
+    </footer>
+</body>
+</html>

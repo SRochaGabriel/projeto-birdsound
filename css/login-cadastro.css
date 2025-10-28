@@ -1,0 +1,87 @@
+/* Definições para o main */
+main {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Definições para o form */
+form {
+    background-color: #fff;
+    box-shadow: 0 0 2px #202020;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+/* Definições para as divs que contém cada input */
+.input-box, .checkinput-box {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Definições para os labels do input-box */
+.input-box label {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Definições para o label do checkinput-box */
+.checkinput-box label {
+    cursor: pointer;
+}
+
+/* Definições para todas as labels */
+label {
+    font-weight: 600;
+}
+
+/* Definições para os inputs do input-box */
+.input-box input {
+    width: 100%;
+    border: 0;
+    box-shadow: 0 0 2px #202020;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.input-box input:invalid {
+    box-shadow: 0 0 2px #ff2e2e;
+}
+
+/* Definições para o ícone de esconder/mostrar senha do input de senha */
+.input-box .show-hide-password {
+    position: absolute;
+    top: 55%;
+    right: 2%;
+    cursor: pointer;
+}
+
+/* Definições para o botão */
+form button {
+    background-color: #ff2e2e;
+    color: #fff;
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 200px;
+    font-size: 1.1rem;
+    padding: 12px;
+    margin: 1em 0;
+}
+
+form a {
+    text-decoration: none;
+    color: #ff2e2e;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+/* Definições para links como 'esqueci minha senha' e 'fazer cadastro' */
+.form-link {
+    margin: 10px 0;
+}

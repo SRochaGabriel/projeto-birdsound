@@ -1,0 +1,69 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Racing+Sans+One&display=swap');
+
+/* Definições gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Questrial", sans-serif;
+}
+
+/* Definições para o body */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Definições para o header */
+header {
+    background-color: #ff2e2e;
+}
+
+/* Definições para o nav */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+
+/* Definições para os links do nav */
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Definições para o nome da loja sendo exibido no header */
+.lettering {
+    font-family: "Racing Sans One", sans-serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px #202020;
+}
+
+/* Definições para a div que contém os links de navegação */
+.nav-links {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1em 3em;
+    font-size: 1.2rem;
+}
+
+/* Definições para o main */
+main {
+    flex: 1;
+    background-color: #e6e5e5;
+}
+
+/* Definições para o rodapé */
+footer {
+    background-color: #ff2e2e;
+    color: #ffafaf;
+    text-align: center;
+    padding: 1em;
+}
