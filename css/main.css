@@ -47,7 +47,6 @@ nav a {
 
 /* Definições para a div que contém os links de navegação */
 .nav-links {
-    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -58,6 +57,67 @@ nav a {
 /* Definições para o main */
 main {
     flex: 1;
+}
+
+/* Definições para o botão de abrir/fechar a navbar */
+#menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/* Definições de display padrão para os ícones do botão de abrir/fechar a navbar */
+#btn-open {
+    display: block;
+}
+
+#btn-close {
+    display: none;
+}
+
+/* Definições de display para os ícones do botão de abrir/fechar a navbar quando a navbar tiver sido aberta */
+#menu-toggle.aberto #btn-open {
+    display: none;
+}
+
+#menu-toggle.aberto #btn-close {
+    display: block;
+}
+
+/* Regras que serão ativadas em telas menores de 768px de width */
+@media(max-width:768px) {
+    /* Exibe o botão de toggle do navbar */
+    #menu-toggle {
+        display: block;
+    }
+
+    /* Aplica gap aos elementos do nav */
+    nav {
+        gap: 1em;
+    }
+
+    /* Remove o display da div "nav-links" */
+    .nav-links {
+        display: none;
+    }
+
+    /* Ao receber a classe "aberto", a div "nav-links" recebe display */
+    .nav-links.aberto {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+/* Regras que serão ativadas em telas menores de 575px */
+@media(max-width:575px) {
+    /* Os links da div "nav-links" são dispostos em direção de coluna */
+    .nav-links.aberto {
+        flex-direction: column;
+    }
 }
 
 /* Definições para o rodapé */
