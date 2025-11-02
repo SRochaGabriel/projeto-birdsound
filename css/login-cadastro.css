@@ -11,6 +11,7 @@ form {
     background-color: #fff;
     box-shadow: 0 0 2px #202020;
     padding: 2em;
+    max-width: 25em;
     border-radius: 10px;
 }
 
@@ -47,6 +48,7 @@ label {
     font-size: 1.1rem;
 }
 
+/* Definições para os inputs que ainda não tem um valor válido */
 .input-box input:invalid {
     box-shadow: 0 0 2px #ff2e2e;
 }
@@ -70,13 +72,16 @@ form button {
     font-size: 1.1rem;
     padding: 12px;
     margin: 1em 0;
+    cursor: pointer;
 }
 
+/* Definições para os links dentro do form */
 form a {
     text-decoration: none;
     color: #ff2e2e;
 }
 
+/* Comportamento dos links dentro do form durante hover */
 form a:hover {
     text-decoration: underline;
 }
