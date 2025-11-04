@@ -48,11 +48,6 @@ label {
     font-size: 1.1rem;
 }
 
-/* Definições para os inputs que ainda não tem um valor válido */
-.input-box input:invalid {
-    box-shadow: 0 0 2px #ff2e2e;
-}
-
 /* Definições para o ícone de esconder/mostrar senha do input de senha */
 .input-box .show-hide-password {
     position: absolute;
