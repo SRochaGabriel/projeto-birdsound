@@ -1,6 +1,12 @@
 /* Importando fontes */
 @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Racing+Sans+One&display=swap');
 
+/* Definindo variáveis para cor */
+:root {
+    --primary-color: #ff2e2e;
+    --secondary-color: #e6e5e5;
+}
+
 /* Definições gerais */
 * {
     margin: 0;
@@ -11,7 +17,7 @@
 
 /* Definições para o body */
 body {
-    background-color: #e6e5e5;
+    background-color: var(--secondary-color);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,7 +26,7 @@ body {
 
 /* Definições para o header */
 header {
-    background-color: #ff2e2e;
+    background-color: var(--primary-color);
 }
 
 /* Definições para o nav */
@@ -35,7 +41,7 @@ nav {
 /* Definições para os links do nav */
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 /* Definições para o nome da loja sendo exibido no header */
@@ -57,6 +63,10 @@ nav a {
 /* Definições para o main */
 main {
     flex: 1;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Definições para o botão de abrir/fechar a navbar */
@@ -122,11 +132,16 @@ main {
 
 /* Definições para o rodapé */
 footer {
-    background-color: #ff2e2e;
+    background-color: var(--primary-color);
     color: #ffafaf;
     text-align: center;
     padding: 1em;
     display: flex;
     flex-direction: column;
     gap: 0.8em;
+}
+
+/* Ancoras em geral */
+a {
+    text-decoration: none;
 }
