@@ -1,0 +1,85 @@
+/* Direção do main */
+main {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Definição para as seções da página */
+section {
+    width: min(50rem, 100%);
+}
+
+/* Banner */
+.banner {
+    background-color: #222;
+    background-image: url('../imagens/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    min-height: 18rem;
+    border-radius: 30px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner p {
+    color: var(--secondary-color);
+    align-content: center;
+    flex: 1;
+}
+
+.banner a {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 50px;
+    align-self: flex-end;
+    transition: all 0.2s ease-in-out;
+}
+
+.banner a:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Seção de produtos */
+#sec-prod a {
+    color: var(--primary-color);
+}
+
+/* Display dos cards */
+.display {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Cards */
+.display-card {
+    max-width: 10rem;
+    border-radius: 30px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.display-card:hover {
+    transform: translateY(5px);
+}
+
+.display-card a {
+    display: block;
+    border-radius: inherit;
+}
+
+.display-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: inherit;
+}
