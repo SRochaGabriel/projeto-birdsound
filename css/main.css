@@ -69,6 +69,15 @@ main {
     align-items: center;
 }
 
+/* Definição para as seções da página */
+section {
+    width: min(50rem, 100%);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
 /* Definições para o botão de abrir/fechar a navbar */
 #menu-toggle {
     display: none;

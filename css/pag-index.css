@@ -4,11 +4,6 @@ main {
     gap: 2rem;
 }
 
-/* Definição para as seções da página */
-section {
-    width: min(50rem, 100%);
-}
-
 /* Banner */
 .banner {
     background-color: #222;
@@ -52,7 +47,6 @@ section {
 
 /* Display dos cards */
 .display {
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
