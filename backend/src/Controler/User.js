@@ -45,7 +45,7 @@ export async function insertUser(req, res) {
                 VALUES (?, ?, ?, ?, ?)
             `, [user.cpf, user.nome, user.email, user.telefone, hashedPass]);
 
-            const token = jwt.sign({ id: newUser.id }, process.env.JWT_SECRET, {expiresIn: process.env.JWT_TIMEOUT});
+            const token = jwt.sign({ id: newUser.id, email: newUser.email }, process.env.JWT_SECRET, {expiresIn: process.env.JWT_TIMEOUT});
     
             res.status(201).json({message:'Usuário cadastrado!', token:token})
         } catch (err) {

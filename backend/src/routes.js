@@ -9,19 +9,19 @@ import { getUser, insertUser, deleteUser, updateUser } from "./Controler/User.js
 // instanciando
 const router = Router();
 
+// Rota de autenticação, serve para verificar se o usuário está logado
 router.get('/usuario/auth', authenticateJWT, (req, res) => {
     res.status(200).json({message: 'Usuário autenticado'});
 });
 
-router.post('/user', async (req, res) => {
+// Rota que busca as informações do usuário para exibir no perfil
+router.get('/user', authenticateJWT, async (req, res) => {
     try {
-        const user = await getUser(req.body.email);
-        console.log(user)
-        res.json(user)
+        const user = await getUser(req.authUser.email);
+        res.status(200).json({cpf: user.cpf, nome: user.nome, email: user.email, telefone: user.telefone});
     } catch (err) {
-        console.log(err)
+        res.status(400).json(err)
     }
-
 })
 
 // Rota de cadastro, insere usuário no bd
@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
         }
     
         // gerando token JWT
-        const token = jwt.sign({id: user.id}, process.env.JWT_SECRET, {expiresIn: process.env.JWT_TIMEOUT});
+        const token = jwt.sign({id: user.id, email: user.email}, process.env.JWT_SECRET, {expiresIn: process.env.JWT_TIMEOUT});
 
         res.status(200).json({message:'Login realizado com sucesso.', token:token})
     } catch (err) {
