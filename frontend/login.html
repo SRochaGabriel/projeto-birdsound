@@ -24,8 +24,8 @@
             <div class="nav-links">
                 <a href="./prod-geral.html">Produtos</a>
                 <a href="./servicos.html">Serviços</a>
-                <a href="./login.html">Entrar</a>
                 <a href="./sobre.html">Sobre</a>
+                <a id="login-profile" href="./login.html">Entrar</a>
                 <a href="./carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
         </nav>
@@ -36,19 +36,13 @@
         <form id="login-form">
             <div class="input-box">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="exemplo@endereco.com" required>
+                <input type="email" id="email" name="email" placeholder="exemplo@endereco.com" required>
             </div>
 
             <div class="input-box">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Insira sua senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Insira sua senha" required>
                 <i class="show-hide-password fa-solid fa-eye"></i>
-            </div>
-
-            <div class="checkinput-box">
-                <label for="lembrar">
-                    <input type="checkbox" id="lembrar"> Lembre de mim
-                </label>
             </div>
 
             <button type="submit">Entrar</button>
@@ -66,6 +60,7 @@
         <p>Desenvolvido por Futura.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/login-cadastro.js"></script>
 </body>

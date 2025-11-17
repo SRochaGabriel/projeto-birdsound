@@ -1,32 +1,54 @@
-// importações
-import axios from 'axios';
-
 const iconSenha = document.querySelector('.show-hide-password');
 const inputSenha = document.querySelector('#senha');
-const inputCpfCnpj = document.querySelector('#cpf');
+const inputCpf = document.querySelector('#cpf');
 const inputTel = document.querySelector('#tel');
 const cadastroForm = document.querySelector('#cadastro-form');
+const loginForm = document.querySelector('#login-form');
 
 // Cadastrando usuário
-cadastroForm.addEventListener('submit', async e => {
-    e.preventDefault();
+if (cadastroForm) {
+    cadastroForm.addEventListener('submit', async e => {
+        e.preventDefault();
 
-    const formData = new FormData(e.target);
+        const formData = new FormData(e.target);
 
-    const userData = Object.fromEntries(formData.entries());
+        const userData = Object.fromEntries(formData.entries());
 
-    try {
-        const response = await axios.post('http://localhost:8000/cadastro', userData);
+        try {
+            const response = await axios.post('http://localhost:8000/cadastro', userData);
 
-        // salvando token no localStorage
-        localStorage.setItem('jwtoken', response.data.token);
-        
-        window.location.href = '../index.html';
-    } catch (err) {
-        console.log(err)
-        alert(err.response.data.message);
-    }
-});
+            // salvando token no localStorage
+            localStorage.setItem('jwtoken', response.data.token);
+            
+            window.location.href = '../index.html';
+        } catch (err) {
+            console.log(err);
+            alert(err.response.data.message);
+        }
+    });
+}
+
+// Realizando login
+if (loginForm) {
+    loginForm.addEventListener('submit', async e => {
+        e.preventDefault();
+    
+        const formData = new FormData(e.target);
+    
+        const loginData = Object.fromEntries(formData.entries());
+    
+        try {
+            const response = await axios.post('http://localhost:8000/login', loginData);
+    
+            localStorage.setItem('jwtoken', response.data.token);
+    
+            window.location.href = '../index.html';
+        } catch (err) {
+            console.log(err);
+            alert(err.response.data.message);
+        }
+    });
+}
 
 // Lógica para esconder/exibir senha
 iconSenha.addEventListener('click', () => {
@@ -42,22 +64,26 @@ iconSenha.addEventListener('click', () => {
 });
 
 // Lógica de aplicar máscara no input de Telefone
-inputTel.addEventListener('input', () => {
-    // Limpa do input qualquer coisa que não seja dígito
-    inputTel.value = inputTel.value.replace(/\D/g, '');
-
-    // Transforma o formato
-    inputTel.value = inputTel.value.replace(/(\d{2})(\d{5})(\d{4})/g, '($1) $2-$3');
-});
+if(inputTel) {
+    inputTel.addEventListener('input', () => {
+        // Limpa do input qualquer coisa que não seja dígito
+        inputTel.value = inputTel.value.replace(/\D/g, '');
+    
+        // Transforma o formato
+        inputTel.value = inputTel.value.replace(/(\d{2})(\d{5})(\d{4})/g, '($1) $2-$3');
+    });
+}
 
 // Lógica de aplicar máscara no input de CPF/CNPJ
-inputCpfCnpj.addEventListener('input', () => {
-    // Limpa do input qualquer coisa que não seja dígito
-    inputCpfCnpj.value = inputCpfCnpj.value.replace(/\D/g, '');
-
-    // aplica a máscara
-    inputCpfCnpj.value = mascaraCPF(inputCpfCnpj.value);
-});
+if(inputCpf) {
+    inputCpf.addEventListener('input', () => {
+        // Limpa do input qualquer coisa que não seja dígito
+        inputCpf.value = inputCpf.value.replace(/\D/g, '');
+    
+        // aplica a máscara
+        inputCpf.value = mascaraCPF(inputCpf.value);
+    });
+}
 
 // Realiza a formatação do valor de CPF
 function mascaraCPF(valor) {
