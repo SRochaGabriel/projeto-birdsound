@@ -9,6 +9,10 @@ import { getUser, insertUser, deleteUser, updateUser } from "./Controler/User.js
 // instanciando
 const router = Router();
 
+router.get('/usuario/auth', authenticateJWT, (req, res) => {
+    res.status(200).json({message: 'Usuário autenticado'});
+});
+
 router.post('/user', async (req, res) => {
     try {
         const user = await getUser(req.body.email);
