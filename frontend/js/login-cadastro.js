@@ -1,3 +1,6 @@
+// importações
+import axios from 'axios';
+
 const iconSenha = document.querySelector('.show-hide-password');
 const inputSenha = document.querySelector('#senha');
 const inputCpfCnpj = document.querySelector('#cpf');
