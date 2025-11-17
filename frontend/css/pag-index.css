@@ -47,7 +47,6 @@ main {
 .banner a {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    font-weight: 600;
     padding: 1rem;
     border-radius: 50px;
     align-self: flex-start;

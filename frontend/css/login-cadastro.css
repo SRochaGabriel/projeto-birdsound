@@ -8,7 +8,7 @@ form {
 }
 
 /* Definições para as divs que contém cada input */
-.input-box, .checkinput-box {
+.input-box {
     position: relative;
     margin-bottom: 10px;
 }
@@ -18,11 +18,6 @@ form {
     display: block;
     width: 100%;
     margin-bottom: 5px;
-}
-
-/* Definições para o label do checkinput-box */
-.checkinput-box label {
-    cursor: pointer;
 }
 
 /* Definições para todas as labels */
@@ -50,8 +45,8 @@ label {
 
 /* Definições para o botão */
 form button {
-    background-color: #ff2e2e;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     display: block;
     width: 100%;
     border: 0;
@@ -60,6 +55,13 @@ form button {
     padding: 12px;
     margin: 1em 0;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+form button:hover {
+    box-shadow: 0 0 5px #202020;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 /* Definições para os links dentro do form */

@@ -18,10 +18,13 @@ async function authUser() {
                 'Authorization': `Bearer ${localStorage.getItem('jwtoken')}`
             }
         });
-
         updateUI(true);
     } catch (err) {
         updateUI(false);
+        
+        if (window.location.href.includes('perfil')) {
+            window.location.href = '../index.html';
+        }
     }
 }
 

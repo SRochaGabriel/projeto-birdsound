@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/login-cadastro.css">
-    <title>Bird Sound | Login</title>
+    <link rel="stylesheet" href="./css/perfil.css">
+    <title>Meu Perfil</title>
 </head>
 <body>
     <!-- Cabeçalho da página com um NAV-->
@@ -33,25 +34,48 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <form id="login-form">
+        <form id="user-form">
+            <section>
+                <p>Minhas informações</p>
+                <i class="fa-solid fa-user"></i>
+                <div>
+                    <button id="logout">
+                        <i class="fa-solid fa-circle-left"></i>
+                        Sair
+                    </button>
+                </div>
+            </section>
+            
+            <div class="input-box">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="(xxx.xxx.xxx-xx) ou (xx.xxx.xxx/000x-xx)" maxlength="14" disabled>
+            </div>
+            
+            <div class="input-box">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required disabled>
+            </div>
+            
             <div class="input-box">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="exemplo@endereco.com" required>
+                <input type="email" id="email" name="email" required pattern=".+@.+\..+" title="exemplo@endereco.dominio" disabled>
             </div>
-
+            
             <div class="input-box">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Insira sua senha" required>
-                <i class="show-hide-password fa-solid fa-eye"></i>
+                <label for="tel">Telefone</label>
+                <input type="tel" id="tel" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" title="(xx) xxxxx-xxxx" maxlength="11" disabled>
             </div>
-
-            <button type="submit">Entrar</button>
-
-            <a href="recuperar-senha.html" class="form-link">Esqueci minha senha</a>
-            <p class="form-link">Ainda não é cadastrado? <a href="./cadastro.html">Faça seu cadastro</a></p>
+            
+            <div class="opcoes-area">
+                <button id="editar">Editar</button>
+                <button id="deletar">Apagar conta</button>
+            </div>
+            
+            <button type="reset" id="cancelar">Cancelar</button>
+            <button type="submit" id="salvar">Salvar</button>
         </form>
     </main>
-
+    
     <!-- Rodapé -->
     <footer>
         <p>Telefone:</p>
@@ -63,5 +87,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/login-cadastro.js"></script>
+    <script src="./js/perfil.js"></script>
 </body>
 </html>

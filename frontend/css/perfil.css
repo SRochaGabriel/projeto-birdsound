@@ -1,0 +1,61 @@
+/* Form */
+form {
+    width: min(50rem, 100%);
+}
+
+form input:disabled {
+    color: #0000006c;
+}
+
+/* Seção do form */
+form section {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+form section div {
+    width: 100%;
+}
+
+/* Botão de logout */
+#logout {
+    font-size: 1.3rem;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+#logout:hover {
+    box-shadow: none;
+    text-decoration: underline;
+    transform: translateX(-5px);
+}
+
+/* Div com botoões */
+.opcoes-area {
+    display: flex;
+}
+
+.opcoes-area button {
+    max-width: 10rem;
+    margin: 5px;
+}
+
+/* Botão de salvar */
+#salvar {
+    display: none;
+}
+
+/* Botão de cancelar edição */
+#cancelar {
+    display: none;
+}
