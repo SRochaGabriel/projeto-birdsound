@@ -15,10 +15,10 @@ export function authenticateJWT (req, res, next) {
     // verifica o token, se válido, envia as informações dele decodificadas para a requisição e segue com o processo
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET)
-        req.authUser = decoded;
+        req.userA = decoded;
         next();
     } catch (err) {
         // caso token inválido
-        res.status(403).json({message: 'Token inválido ou expirado'})
+        res.status(401).json({message: 'Token inválido ou expirado'})
     }
 }

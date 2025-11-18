@@ -2,7 +2,6 @@
 import { openDb } from '../configDB.js';
 // importando bcrypt para hashear senhas
 import bcrypt from 'bcrypt';
-import e from 'express';
 import jwt from 'jsonwebtoken';
 
 // função de criação de tabela
@@ -22,10 +21,15 @@ export async function createTable() {
 }
 
 // função de retorno de um usuário
-export async function getUser(email) {
+export async function getUser(req, res) {
     const db = await openDb();
-
-    return await db.get('SELECT * FROM User WHERE email=?', email);
+    try {
+        const user = await db.get('SELECT cpf, nome, email, telefone FROM User WHERE email=?', req.userA.email);
+        res.status(200).json({cpf: user.cpf, nome: user.nome, email: user.email, telefone: user.telefone});
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err)
+    }
 }
 
 // função de inserção de usuário
@@ -45,7 +49,7 @@ export async function insertUser(req, res) {
                 VALUES (?, ?, ?, ?, ?)
             `, [user.cpf, user.nome, user.email, user.telefone, hashedPass]);
 
-            const token = jwt.sign({ id: newUser.id, email: newUser.email }, process.env.JWT_SECRET, {expiresIn: process.env.JWT_TIMEOUT});
+            const token = jwt.sign({ id: newUser.lastID, email: user.email }, process.env.JWT_SECRET, {expiresIn: process.env.JWT_TIMEOUT});
     
             res.status(201).json({message:'Usuário cadastrado!', token:token})
         } catch (err) {
@@ -60,7 +64,7 @@ export async function insertUser(req, res) {
 
 // função de apagar conta do usuário
 export async function deleteUser(req, res) {
-    const userId = req.authUser.id;
+    const userId = req.userA.id;
     const db = await openDb();
 
     try {
@@ -78,7 +82,7 @@ export async function updateUser(req, res) {
         return res.status(400).json({message:'Dados para atualização não encontrados.'});
     } else {
         const user = req.body;
-        const userId = req.authUser.id;
+        const userId = req.userA.id;
 
         const db = await openDb();
     
@@ -96,5 +100,16 @@ export async function updateUser(req, res) {
         } catch (err) {
             res.status(500).json({message:'Ocorreu um erro durante a tentativa de atualização das informações.'})
         }
+    }
+}
+
+// recuperar senha
+export async function resetPassword(senha, id) {
+    const db = await openDb();
+
+    try {
+        await db.run('UPDATE User SET senha=? WHERE id=?', [senha, id]);
+    } catch (err) {
+        return err;
     }
 }
