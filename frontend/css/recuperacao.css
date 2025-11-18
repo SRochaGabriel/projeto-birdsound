@@ -1,0 +1,20 @@
+/* Botão de alterar senha */
+#alterar {
+    display: none;
+}
+
+/* Input boxes de código e senha */
+.cod-pass-box {
+    color: #aaa;
+}
+
+/* Botão reset */
+#reset {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+#reset:hover {
+    box-shadow: none;
+    text-decoration: underline;
+}

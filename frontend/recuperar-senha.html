@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/login-cadastro.css">
+    <link rel="stylesheet" href="./css/recuperacao.css">
     <title>Recuperação de senha</title>
 </head>
 <body>
@@ -33,22 +34,27 @@
 
     <!-- Conteúdo principal -->
     <main>
-        <form id="login-form">
-            <div class="input-box">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="exemplo@endereco.com" required>
+        <form id="recover-form">
+            <div class="input-box email-box">
+                <label for="email">Insira o E-mail para recuperar sua senha</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@endereco.com" pattern=".+@.+\..+" title="exemplo@endereco.dominio" required autofocus>
             </div>
 
-            <div class="input-box">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Insira sua senha" required>
+            <div class="input-box cod-pass-box">
+                <label for="codigo">Código *</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Insira o código recebido no e-mail" required disabled>
+            </div>
+
+            <div class="input-box cod-pass-box">
+                <label for="senha">Senha *</label>
+                <input type="password" id="senha" name="senha" placeholder="Insira sua nova senha" required disabled>
                 <i class="show-hide-password fa-solid fa-eye"></i>
             </div>
 
-            <button type="submit">Entrar</button>
+            <button type="submit" id="enviar">Enviar</button>
+            <button type="submit" id="alterar">Alterar senha</button>
 
-            <a href="recuperar-senha.html" class="form-link">Esqueci minha senha</a>
-            <p class="form-link">Ainda não é cadastrado? <a href="./cadastro.html">Faça seu cadastro</a></p>
+            <button type="button" id="reset">Não recebeu o código? Clique aqui para poder enviar novamente</button>
         </form>
     </main>
 
@@ -63,5 +69,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/login-cadastro.js"></script>
+    <script src="./js/rec-senha.js"></script>
 </body>
 </html>

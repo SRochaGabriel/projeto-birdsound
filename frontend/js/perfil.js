@@ -38,37 +38,52 @@ cancelBtn.addEventListener('click', () => {
 
 // ao clique do botão salvar, ou seja, submit do formulário de atualização
 userForm.addEventListener('submit', async e => {
+    e.preventDefault();
+
     // caso o botão clicado tenha sido 'salvar'
     if (e.submitter.id === 'salvar') {
         const formData = new FormData(e.target);
     
         const userData = Object.fromEntries(formData.entries());
-    
-        try {
-            const response = await axios.put('http://localhost:8000/atualizar', userData, {
-                headers: {
-                    'Authorization': `Bearer ${localStorage.getItem('jwtoken')}`
-                }
-            });
-        } catch (err) {
-            alert(err.response.data.message);
-        }
-    } else if (e.submitter.id === 'deletar') { // caso o botão clicado tenha sido 'apagar conta'
-        try {
-            const response = await axios.delete('http://localhost:8000/deleteaccount', {
-                headers: {
-                    'Authorization': `Bearer ${localStorage.getItem('jwtoken')}`
-                }
-            });
 
-            localStorage.clear();
-        } catch (err) {
-            alert(err.response.data.message);
-        }
+        updateUser(userData);
+    } else if (e.submitter.id === 'deletar') { // caso o botão clicado tenha sido 'apagar conta'
+        deleteUser();
     } else if (e.submitter.id === 'logout') { // caso o botão clicado tenha sido de 'sair'
         localStorage.clear();
+        window.location.href = '../login.html';
     }
 })
+
+// atualiza o usuário
+async function updateUser(userData) {
+    try {
+        await axios.put('http://localhost:8000/atualizar', userData, {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('jwtoken')}`
+            }
+        });
+        window.location.reload();
+    } catch (err) {
+        alert(err.response.data.message);
+    }
+}
+
+// deleta o usuário
+async function deleteUser() {
+    try {
+        await axios.delete('http://localhost:8000/deleteaccount', {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('jwtoken')}`
+            }
+        });
+
+        localStorage.clear();
+        window.location.href = '../login.html';
+    } catch (err) {
+        alert(err.response.data.message);
+    }
+}
 
 // busca as infos do usuário
 async function getUser() {
