@@ -1,6 +1,45 @@
 /* Main */
 main {
     flex-direction: column;
+    gap: 2rem;
+}
+
+/* Seção sobre a empresa */
+#sobre .info {
+    position: relative;
+    min-height: 20rem;
+}
+
+#sobre .info img {
+    display: block;
+    width: 100%;
+}
+
+#sobre .info-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Seção contatos */
+#contatos a {
+    font-size: 1.4rem;
+    color: #222;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    width: fit-content; 
+}
+
+#contatos a:hover {
+    color: var(--primary-color);
+}
+
+/* Ícone */
+#contatos a i {
+    color: #124100;
+    font-size: 1.4em;
 }
 
 /* Seção localização */
@@ -14,5 +53,5 @@ main {
     border-radius: inherit;
     box-shadow: 0 0 1px #222;
     width: 100%;
-    height: 100%;
+    min-height: inherit;
 }
