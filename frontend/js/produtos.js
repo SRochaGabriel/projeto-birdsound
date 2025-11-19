@@ -57,11 +57,11 @@ async function getProdutos(filtro) {
 
                 <div class="produto-info">
                     <h3>${produto.nome}</h3>
-                    <p>${valor}</p>
-                    <p>em ${produto.parcelas}x de ${valorParcela} sem juros</p>
+                    <p class="valor">${valor}</p>
+                    <p class="parcela-info">em ${produto.parcelas}x de ${valorParcela} sem juros</p>
                 </div>
 
-                <button>Comprar</button>
+                <button class="main-btn">Comprar</button>
             </div>
         `;
     });

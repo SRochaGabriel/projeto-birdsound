@@ -18,6 +18,7 @@ h1 {
 
 #filtros form select {
     border: 1px solid #aaa;
+    border-radius: 5px;
 }
 
 #filtros form button {
@@ -75,7 +76,7 @@ h1 {
     padding: 5px;
 }
 
-/* Definições para os cards de produto */
+/* ======= Definições para os cards de produto ====== */
 .item-produto {
     position: relative;
     width: 100%;
@@ -86,6 +87,10 @@ h1 {
     overflow-wrap: anywhere;
 }
 
+.item-produto * {
+    margin: 0;
+}
+
 .item-produto img {
     width: 100%;
     border-radius: 5px;
@@ -93,27 +98,21 @@ h1 {
     display: block;
 }
 
-.item-produto button, #filtros button {
-    padding: 10px;
-    font-size: 1.2rem;
-    border: 0;
-    border-radius: 20px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.item-produto button:hover, #filtros button:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    box-shadow: 0 0 3px #000;
-}
-
+/* Seção que contém as informações do produto */
 .produto-info {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.produto-info h3, .produto-info .valor {
+    font-size: 1.1rem;
+}
+
+.produto-info .valor {
+    color: #074aa1;
+    font-weight: bold;
 }
 
 /* Definindo linhas de borda para a grid */
