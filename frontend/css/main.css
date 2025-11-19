@@ -158,3 +158,34 @@ a {
 hr {
     width: min(50rem, 100%);
 }
+
+/* Classes para estilizar botões */
+.main-btn {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 3px #000;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    text-decoration: underline;
+}

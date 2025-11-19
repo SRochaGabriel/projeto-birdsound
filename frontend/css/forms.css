@@ -45,37 +45,28 @@ label {
 
 /* Definições para o botão */
 form button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
     display: block;
     width: 100%;
-    border: 0;
-    border-radius: 200px;
-    font-size: 1.1rem;
-    padding: 12px;
     margin: 1em 0;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-form button:hover {
-    box-shadow: 0 0 5px #202020;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-}
-
-/* Definições para os links dentro do form */
-form a {
-    text-decoration: none;
-    color: #ff2e2e;
-}
-
-/* Comportamento dos links dentro do form durante hover */
-form a:hover {
-    text-decoration: underline;
 }
 
 /* Definições para links como 'esqueci minha senha' e 'fazer cadastro' */
 .form-link {
     margin: 10px 0;
+}
+
+/* ======== Definições da página de recuperação de senha =============== */
+/* Botão de alterar senha */
+#alterar {
+    display: none;
+}
+
+/* Input boxes de código e senha */
+.cod-pass-box {
+    color: #aaa;
+}
+
+/* Botão reset */
+#reset {
+    font-size: 1rem;
 }
