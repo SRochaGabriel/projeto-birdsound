@@ -28,15 +28,9 @@ form section div {
 #logout {
     font-size: 1.3rem;
     width: fit-content;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    color: var(--primary-color);
 }
 
 #logout:hover {
-    box-shadow: none;
-    text-decoration: underline;
     transform: translateX(-5px);
 }
 
