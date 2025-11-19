@@ -46,8 +46,6 @@ h1 {
 #paginacao button {
     border: 0;
     padding: 10px;
-    background-color: transparent;
-    color: var(--primary-color);
     font-size: 1.4rem;
     cursor: pointer;
 }
@@ -58,6 +56,10 @@ h1 {
 
 #paginacao button:hover {
     text-decoration: underline;
+}
+
+#pagina-atual {
+    font-weight: 600;
 }
 
 /* Grid de produtos */
