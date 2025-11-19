@@ -268,5 +268,65 @@
         "tipo": "Caixa de Som",
         "categoria": "Som e Multimídia",
         "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0560668_corneta-redonda-metalizada-1425-ludovico-16077m.jpeg"
+    },
+    {
+        "id": 28,
+        "nome": "Controle de Alarme Rk1304 Chave Cartão - RAKTAS / ASHER 001000275",
+        "valor": 50.90,
+        "parcelas": 1,
+        "fabricante": "RAKTAS/ASHER",
+        "tipo": "Controle de Alarme",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0492090_controle-de-alarme-rk1304-chave-cartao-raktas-001000275.jpeg"
+    },
+    {
+        "id": 29,
+        "nome": "Controle de Alarme Rk1100 Chave Canivete - RAKTAS / ASHER 001000230",
+        "valor": 45.90,
+        "parcelas": 1,
+        "fabricante": "RAKTAS/ASHER",
+        "tipo": "Controle de Alarme",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0492082_controle-de-alarme-rk1100-chave-canivete-raktas-001000230.jpeg"
+    },
+    {
+        "id": 30,
+        "nome": "Controle de Alarme Rk601 Chave Canivete - RAKTAS / ASHER 001000387",
+        "valor": 69.90,
+        "parcelas": 1,
+        "fabricante": "RAKTAS/ASHER",
+        "tipo": "Controle de Alarme",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0492066_controle-de-alarme-rk601-chave-canivete-raktas-001000387.jpeg"
+    },
+    {
+        "id": 31,
+        "nome": "Alarme Automotivo Cyber FX 360 Universal - POSITRON 012871000",
+        "valor": 399.90,
+        "parcelas": 3,
+        "fabricante": "POSITRON",
+        "tipo": "Alarme para Carro",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0313774_alarme-automotivo-cyber-fx-360-universal-positron-012871000.jpeg"
+    },
+    {
+        "id": 32,
+        "nome": "Alarme Automotivo Keyless 360 com Função Presença Universal - POSITRON 012873000",
+        "valor": 399.90,
+        "parcelas": 3,
+        "fabricante": "POSITRON",
+        "tipo": "Alarme para Carro",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0313969_alarme-automotivo-keyless-360-com-funcao-presenca-universal-positron-012873000.jpeg"
+    },
+    {
+        "id": 33,
+        "nome": "Alarme Automotivo Keyless 360 Light Universal - POSITRON 012873006",
+        "valor": 425.90,
+        "parcelas": 3,
+        "fabricante": "POSITRON",
+        "tipo": "Alarme para Carro",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0313969_alarme-automotivo-keyless-360-com-funcao-presenca-universal-positron-012873000.jpeg"
     }
 ]

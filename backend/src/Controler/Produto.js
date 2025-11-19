@@ -46,6 +46,7 @@ export async function getProdutos(req, res) {
     res.status(404).json({message: 'Não foi possível encontrar produtos de acordo com esses filtros.'});
 }
 
+// função que retorna somente os produtos da página requisitada
 function getProdutosPage(pagina, limiteItens) {
     // separando o array 'produtos' com base nas posições válidas de acordo com a página
     const startIndex = (pagina - 1) * limiteItens;
