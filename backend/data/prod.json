@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "nome": "Aparelho de Som Automotivo MP3 Player com Bluetooth Viva-Voz Áudio USB FM - POSITRON SP2230BT",
+        "valor": 189.90,
+        "parcelas": 1,
+        "fabricante": "POSITRON",
+        "tipo": "Aparelho de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0332402_aparelho-de-som-automotivo-mp3-player-com-bluetooth-viva-voz-audio-usb-fm-positron-sp2230bt.jpeg"
+    },
+    {
+        "id": 2,
+        "nome": "Smartphone Receiver com Bluetooth USB 3 Saídas RCA Controle de Volante e Smart Sync - PIONEER SPHC10BT",
+        "valor": 799.90,
+        "parcelas": 7,
+        "fabricante": "PIONEER",
+        "tipo": "Aparelho de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0333676_smartphone-receiver-com-bluetooth-usb-3-saidas-rca-controle-de-volante-e-smart-sync-pioneer-sphc10bt.jpeg"
+    },
+    {
+        "id": 3,
+        "nome": "MP3/FM/USB/BT/C/TOUCH/C/PEN DRIVE - MULTILASER P3355",
+        "valor": 129.90,
+        "parcelas": 1,
+        "fabricante": "MULTILASER",
+        "tipo": "Aparelho de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0437949_mp3fmusbbtctouchcpen-drive-multilaser-p3355.jpeg"
+    },
+    {
+        "id": 4,
+        "nome": "Som Automotivo com Rádio FM, Mp3, Bluetooth, Usb, Sd, Auxiliar P2, Led Azul - KX3/GALTEC KRC1910E",
+        "valor": 79.90,
+        "parcelas": 1,
+        "fabricante": "KX3/GALTEC",
+        "tipo": "Aparelho de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0520748_som-automotivo-com-radio-fm-mp3-bluetooth-usb-sd-auxiliar-p2-led-azul-kx3galtec-krc1910e.jpeg"
+    },
+    {
+        "id": 5,
+        "nome": "Multimidia MP5 9 Polegadas - H TECH HT9290CA",
+        "valor": 849.90,
+        "parcelas": 8,
+        "fabricante": "H TECH",
+        "tipo": "Multimídia",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0499136_multimidia-mp5-9-polegadas-h-tech-ht9290ca.jpeg"
+    },
+    {
+        "id": 6,
+        "nome": "Central Multimídia Universal Evolve 7 Pol. 2 Din/Mp5/Bluetooth 4X35W - MULTILASER GP348",
+        "valor": 299.90,
+        "parcelas": 2,
+        "fabricante": "MULTILASER",
+        "tipo": "Multimídia",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0362850_central-multimidia-universal-evolve-7-pol-2-dinmp5bluetooth-4x35w-multilaser-gp348.jpeg"
+    },
+    {
+        "id": 7,
+        "nome": "Reprodutor de Vídeo 7 Pol. 2 Din - JR8 JT30MP57520",
+        "valor": 239.90,
+        "parcelas": 2,
+        "fabricante": "JR8",
+        "tipo": "Multimídia",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0498967_reprodutor-de-video-7-pol-2-din-jr8-jt30mp57520.jpeg"
+    },
+    {
+        "id": 8,
+        "nome": "Reprodutor de Vídeo Multimidia 10 2 Din Usb/Auxiliar/Fm/Bluetooth - ROADSTAR BRASIL RS1015BR",
+        "valor": 729.90,
+        "parcelas": 7,
+        "fabricante": "ROADSTAR BRASIL",
+        "tipo": "Multimídia",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0555806_reprodutor-de-video-multimidia-10-2-din-usbauxiliarfmbluetooth-roadstar-brasil-rs1015br.jpeg"
+    },
+    {
+        "id": 9,
+        "nome": "Multimídia - H TECH HT2500",
+        "valor": 189.90,
+        "parcelas": 1,
+        "fabricante": "H TECH",
+        "tipo": "Multimídia",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0554980_multimidia-h-tech-ht2500.jpeg"
+    },
+    {
+        "id": 10,
+        "nome": "Alto-Falante Quadriaxial B4X69X 6X9 Pol. 70W Rms - BRAVOX 96057072",
+        "valor": 169.90,
+        "parcelas": 1,
+        "fabricante": "BRAVOX",
+        "tipo": "Alto-falante",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0295852_alto-falante-quadriaxial-b4x69x-6x9-pol-70w-rms-bravox-96057072.jpeg"
+    },
+    {
+        "id": 11,
+        "nome": "Alto-Falante Diamond 6x9 Pol.Quadriaxial Universal 300W Rms - BRAVOX 96057075",
+        "valor": 329.90,
+        "parcelas": 3,
+        "fabricante": "BRAVOX",
+        "tipo": "Alto-falante",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0402402_alto-falante-diamond-6x9-polquadriaxial-universal-300w-rms-bravox-96057075.jpeg"
+    },
+    {
+        "id": 12,
+        "nome": "Alto Falante - JR8 NSF523",
+        "valor": 169.90,
+        "parcelas": 1,
+        "fabricante": "JR8",
+        "tipo": "Alto-falante",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0550745_alto-falante-jr8-nsf523.jpeg"
+    },
+    {
+        "id": 13,
+        "nome": "Alto-Falante Quadriaxial 6X9 Pol. 100W Rms - JBL SELENIUM 28085206",
+        "valor": 296.90,
+        "parcelas": 2,
+        "fabricante": "JBL SELENIUM",
+        "tipo": "Alto-falante",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0556009_alto-falante-quadriaxial-6x9-pol-100w-rms-jbl-selenium-28085206.jpeg"
+    },
+    {
+        "id": 14,
+        "nome": "Subwoofer Premium P10S4 10 Pol. 160 Rms Bobina Simples 4 Ohms - BRAVOX 97014104",
+        "valor": 249.90,
+        "parcelas": 2,
+        "fabricante": "BRAVOX",
+        "tipo": "Subwoofer",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0290549_subwoofer-premium-p10s4-10-pol-160-rms-bobina-simples-4-ohms-bravox-97014104.jpeg"
+    },
+    {
+        "id": 15,
+        "nome": "Subwoofer Bicho Papão 12 Pol. 800W Rms 4 Ohms Bobina Simples - BOMBER 123064",
+        "valor": 737.90,
+        "parcelas": 7,
+        "fabricante": "BOMBER",
+        "tipo": "Subwoofer",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0295723_subwoofer-bicho-papao-12-pol-800w-rms-4-ohms-bobina-simples-bomber-123064.jpeg"
+    },
+    {
+        "id": 16,
+        "nome": "Subwoofer Black BK12D2 12 Pol. 350W Rms Bobina Dupla 2 Ohms - BRAVOX 97011090",
+        "valor": 369.90,
+        "parcelas": 3,
+        "fabricante": "BRAVOX",
+        "tipo": "Subwoofer",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0295828_subwoofer-black-bk12d2-12-pol-350w-rms-bobina-dupla-2-ohms-bravox-97011090.jpeg"
+    },
+    {
+        "id": 17,
+        "nome": "Subwoofer Black BK12D4 12 Pol. 350W Rms Bobina Dupla 4 Ohms - BRAVOX 97011091",
+        "valor": 319.90,
+        "parcelas": 3,
+        "fabricante": "BRAVOX",
+        "tipo": "Subwoofer",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0295831_subwoofer-black-bk12d4-12-pol-350w-rms-bobina-dupla-4-ohms-bravox-97011091.jpeg"
+    },
+    {
+        "id": 18,
+        "nome": "Caixa Selada Bazooka 40 Litros 12 Pol. Revestimento em Courvin - REVANCHE RV781032",
+        "valor": 113.90,
+        "parcelas": 1,
+        "fabricante": "REVANCHE",
+        "tipo": "Caixa de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0276558_caixa-selada-bazooka-40-litros-12-pol-revestimento-em-courvin-revanche-rv781032.jpeg"
+    },
+    {
+        "id": 19,
+        "nome": "Caixa de Som Dutada 12 Pol. 50 Litros - REVANCHE RV781040",
+        "valor": 141.90,
+        "parcelas": 1,
+        "fabricante": "REVANCHE",
+        "tipo": "Caixa de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0276575_caixa-de-som-dutada-12-pol-50-litros-revanche-rv781040.jpeg"
+    },
+    {
+        "id": 20,
+        "nome": "Caixa de Som Selada 12 Pol. 27 Litros - REVANCHE RV781130",
+        "valor": 96.90,
+        "parcelas": 1,
+        "fabricante": "REVANCHE",
+        "tipo": "Caixa de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0276590_caixa-de-som-selada-12-pol-27-litros-revanche-rv781130.jpeg"
+    },
+    {
+        "id": 21,
+        "nome": "Caixa de Som Dutada 12 Pol. 28 Litros - REVANCHE RV781401",
+        "valor": 99.90,
+        "parcelas": 1,
+        "fabricante": "REVANCHE",
+        "tipo": "Caixa de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0394406_caixa-de-som-dutada-12-pol-28-litros-revanche-rv781401.jpeg"
+    },
+    {
+        "id": 22,
+        "nome": "Caixa de Som Selada 12 Pol. 26 Litros - REVANCHE RV781126",
+        "valor": 93.90,
+        "parcelas": 1,
+        "fabricante": "REVANCHE",
+        "tipo": "Caixa de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0394411_caixa-de-som-selada-12-pol-26-litros-revanche-rv781126.jpeg"
+    },
+    {
+        "id": 23,
+        "nome": "Corneta Redonda Curta Parafusada Borda Polida - JBL SELENIUM 28056042",
+        "valor": 127.90,
+        "parcelas": 1,
+        "fabricante": "JBL SELENIUM",
+        "tipo": "Corneta",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0500292_corneta-redonda-curta-parafusada-borda-polida-jbl-selenium-28056042.jpeg"
+    },
+    {
+        "id": 24,
+        "nome": "Corneta Longa Grafitada Caveira Vermelha - FIAMON SOUND 14251597",
+        "valor": 20.90,
+        "parcelas": 1,
+        "fabricante": "FIAMON SOUND",
+        "tipo": "Corneta",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0407775_corneta-longa-grafitada-caveira-vermelha-fiamon-sound-14251597.jpeg"
+    },
+    {
+        "id": 25,
+        "nome": "Corneta Redonda Curta Alumínio Preto - JBL SELENIUM 28056047",
+        "valor": 115.90,
+        "parcelas": 1,
+        "fabricante": "JBL SELENIUM",
+        "tipo": "Corneta",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0341167_corneta-redonda-curta-aluminio-preto-jbl-selenium-28056047.jpeg"
+    },
+    {
+        "id": 26,
+        "nome": "Corneta Retangular Lc 100 (Qs 100) Preta - LUDOVICO 16061",
+        "valor": 33.90,
+        "parcelas": 1,
+        "fabricante": "LUDOVICO",
+        "tipo": "Corneta",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0494040_corneta-retangular-lc-100-qs-100-preta-ludovico-16061.jpeg"
+    },
+    {
+        "id": 27,
+        "nome": "Corneta Redonda Metalizada 14.25 - LUDOVICO 16077M",
+        "valor": 31.90,
+        "parcelas": 1,
+        "fabricante": "LUDOVICO",
+        "tipo": "Caixa de Som",
+        "categoria": "Som e Multimídia",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0560668_corneta-redonda-metalizada-1425-ludovico-16077m.jpeg"
+    }
+]
