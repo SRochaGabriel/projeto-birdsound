@@ -5,6 +5,7 @@ import { authenticateJWT } from "./Middleware/auth.js";
 import { getUser, insertUser, deleteUser, updateUser } from "./Controler/User.js";
 import { logUser, authUser } from './Controler/Session.js';
 import { getCode, sendCode } from './Controler/Recovery.js';
+import { getProdutos } from './Controler/Produto.js';
 
 // instanciando
 const router = Router();
@@ -35,5 +36,8 @@ router.post('/sendcode', sendCode);
 
 // Rota que realiza a validação e atualização de senha
 router.put('/resetpass', authenticateJWT, getCode);
+
+// ======================== ROTAS DE PRODUTOS ==================================
+router.get('/produtos/:page', getProdutos);
 
 export default router;
