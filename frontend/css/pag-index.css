@@ -60,40 +60,47 @@ main {
     color: var(--primary-color);
 }
 
-/* Seção de produtos */
-#sec-prod a {
-    color: var(--primary-color);
+/* Definições para itens do splide carousel */
+.splide {
+    margin: 1rem 0;
+    cursor: grab;
 }
 
-/* Display dos cards */
-.display {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
+.splide:active {
+    cursor: grabbing;
 }
 
-/* Cards */
-.display-card {
-    max-width: 10rem;
-    border-radius: 30px;
-    text-align: center;
-    transition: all 0.2s ease-in-out;
+/* Setas do carousel */
+.splide__arrows {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    width: 120%;
 }
 
-.display-card:hover {
-    transform: translateY(5px);
+.splide__arrow--prev, .splide__arrow--next {
+    background-color: var(--primary-color);
 }
 
-.display-card a {
-    display: block;
-    border-radius: inherit;
+/* Paginação do carousel */
+.splide__pagination {
+    bottom: -5%;
 }
 
-.display-card img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: inherit;
+.splide__pagination__page {
+    background-color: #000;
+}
+
+.splide__pagination__page.is-active {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .splide__arrows {
+        display: none;
+    }
+}
+
+.item-produto {
+    height: 100%;
 }

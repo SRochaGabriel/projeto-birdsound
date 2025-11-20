@@ -72,7 +72,7 @@ function renderProdutos(produtos) {
                 <img src="${produto.imagem}" alt="${produto.nome}"/>
 
                 <div class="produto-info">
-                    <h3>${produto.nome}</h3>
+                    <a class="title-link" href="produto.html" data-id="${produto.id}">${produto.nome}</a>
                     <p class="valor">${valor}</>
                     <p class="parcela-info">em ${produto.parcelas}x de ${valorParcela} sem juros</p>
                 </div>
@@ -80,6 +80,13 @@ function renderProdutos(produtos) {
                 <button class="main-btn">Adicionar ao carrinho</button>
             </div>
         `;
+    });
+
+    // todo nome do produto é um link que, ao ser clicado, salva o id do produto no localstorage antes de ir para a página
+    document.querySelectorAll('.title-link').forEach(link => {
+        link.addEventListener('click', e => {
+            localStorage.setItem('produtoId', link.dataset.id);
+        });
     });
 }
 
@@ -91,7 +98,7 @@ function getProdutosPagina(produtos, pagina) {
     return produtos.slice(startIndex, endIndex);
 }
 
-// função que realiza a filtragem dos produtos e 
+// função que realiza a filtragem dos produtos
 function filtrarProdutos(produtos, filtros) {
     return produtos.filter(produto => {
         // para cada filtro, testa se é compatível com o produto para decidir se retorna ele ou não

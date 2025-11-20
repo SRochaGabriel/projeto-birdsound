@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/pag-index.css">
+    <link rel="stylesheet" href="./css/produtos.css">
     <title>Bird Sound</title>
 </head>
 <body>
@@ -50,28 +52,12 @@
         </section>
 
         <section id="sec-prod">
-            <h2><a href="prod-geral.html">Produtos</a> por categoria</h2>
+            <h2><a href="produtos.html" class="secondary-btn">Produtos</a> por categoria</h2>
 
-            <div class="display">
-                <div class="display-card">
-                    <a href="./prod-som.html">
-                        <img src="./imagens/som-banner.jpeg" alt="Imagem do card">
-                        <h3>Som</h3>
-                    </a>
-                </div>
-
-                <div class="display-card">
-                    <a href="./prod-alarmes.html">
-                        <img src="./imagens/alarme-banner.jpeg" alt="Imagem do card">
-                        <h3>Alarmes</h3>
-                    </a>
-                </div>
-
-                <div class="display-card">
-                    <a href="./prod-insulfilm.html">
-                        <img src="./imagens/insulfilm-banner.jpeg" alt="Imagem do card">
-                        <h3>Insulfilm</h3>
-                    </a>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                    </ul>
                 </div>
             </div>
         </section>
@@ -96,7 +82,8 @@
         <p>Desenvolvido por Futura.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./js/index.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

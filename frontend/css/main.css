@@ -150,6 +150,10 @@ footer {
     gap: 0.8em;
 }
 
+footer p {
+    margin: 0;
+}
+
 /* Ancoras em geral */
 a {
     text-decoration: none;

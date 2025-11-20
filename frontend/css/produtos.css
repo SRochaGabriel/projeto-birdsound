@@ -6,6 +6,7 @@ main {
 
 h1 {
     width: min(50rem, 100%);
+    font-weight: 600;
     text-align: left;
 }
 
@@ -75,7 +76,6 @@ h1 {
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     gap: var(--gap);
     overflow: hidden;
-    padding: 5px;
 }
 
 /* ======= Definições para os cards de produto ====== */
@@ -108,7 +108,15 @@ h1 {
     gap: 5px;
 }
 
-.produto-info h3, .produto-info .valor {
+.produto-info a {
+    color: #000;
+}
+
+.produto-info a:hover {
+    color: #074aa1;
+}
+
+.produto-info a, .produto-info .valor {
     font-size: 1.1rem;
 }
 
