@@ -22,7 +22,7 @@ var splide = new Splide( '.splide', {
 
 // função que busca produtos
 function getProdutos() {
-    fetch('../data/prod.json', {method: 'GET'})
+    fetch('./data/prod.json', {method: 'GET'})
     .then(res => res.json())
     .then(produtos => {
         let prodList = [];

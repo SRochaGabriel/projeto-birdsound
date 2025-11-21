@@ -6,7 +6,7 @@ window.onload = getProduto(localStorage.getItem('produtoId'));
 
 // Pegar o produto específico
 function getProduto(id) {
-    fetch('../data/prod.json')
+    fetch('./data/prod.json')
     .then(res => res.json())
     .then(produtos => {
         let produto;

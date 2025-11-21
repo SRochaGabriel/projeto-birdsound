@@ -24,7 +24,7 @@ filtroForm.addEventListener('submit', e => {
 
 // função que busca os produtos do JSON
 function getProdutos(filtros) {
-    fetch('../data/prod.json', {method: 'GET'})
+    fetch('./data/prod.json', {method: 'GET'})
     .then(res => res.json())
     .then(produtos => {
         // definindo quais valores de filtro podem ser usados entre 'tipo', 'categoria' e 'fabricante'
