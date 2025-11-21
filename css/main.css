@@ -230,6 +230,7 @@ hr {
 
 /* Selects em geral */
 select {
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 5px;
