@@ -1,0 +1,88 @@
+/* Seção de filtros */
+#filtros form {
+    width: 100%;
+    display: flex;
+    gap: 10px 1rem;
+}
+
+#filtros select {
+    width: 100%;
+}
+
+#filtros form button {
+    border-radius: 10px;
+    width: 100%;
+}
+
+@media(max-width:768px) {
+    #filtros form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #filtros form button {
+        width: fit-content;
+    }
+}
+
+/* Seção de paginação */
+#paginacao {
+    display: flex;
+    gap: 5px;
+}
+
+#paginacao button {
+    border: 0;
+    padding: 10px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+#paginacao button:disabled {
+    color: #aaa;
+}
+
+#paginacao button:hover {
+    text-decoration: underline;
+}
+
+#pagina-atual {
+    font-weight: 600;
+}
+
+/* Grid de produtos */
+#produtos-grid {
+    /* variáveis locais */
+    --gap: 2rem;
+    --line-offset: calc(var(--gap) / 2);
+    --line-thickness: 2px;
+    --line-color: #ccc;
+
+    /* definições do grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: var(--gap);
+    overflow: hidden;
+}
+
+/* Definindo linhas de borda para a grid */
+.item-produto::before, .item-produto::after {
+    content: '';
+    position: absolute;
+    background-color: var(--line-color);
+    z-index: 1;
+}
+
+.item-produto::after {
+    inline-size: 100vw;
+    block-size: var(--line-thickness);
+    inset-inline-start: 0;
+    inset-block-start: calc(var(--line-offset) * -1);
+}
+
+.item-produto::before {
+    inline-size: var(--line-thickness);
+    block-size: 100vh;
+    inset-block-start: 0;
+    inset-inline-start: calc(var(--line-offset) * -1);
+}
