@@ -1,0 +1,123 @@
+/* Definição da sessão geral do carrinho */
+#cart-area {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Seção dos produtos do carrinho */
+#produtos-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Item de produto */
+.produto-item {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.produto-item img {
+    width: 14rem;
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid #ccc;
+}
+
+.produto-item .produto-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.info-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-quantidade p, .info-quantidade button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.info-quantidade p {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    align-content: center;
+}
+
+.info-quantidade button {
+    border: 0;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.info-quantidade .excluir-btn {
+    margin-left: auto;
+}
+
+/* Área do cálculo final do carrinho */
+#compra-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 34rem;
+    height: fit-content;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#compra-info .valor {
+    font-size: 1.6rem;
+}
+
+#compra-info button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#compra-info button i {
+    font-size: 1.8rem;
+}
+
+/* Organizando o carrinho em telas menores de 768px */
+@media(max-width: 768px) {
+    #cart-area {
+        flex-wrap: wrap;
+    }
+
+    #produtos-area {
+        order: 2;
+    }
+
+    #compra-info {
+        order: 1;
+        width: 100%;
+    }
+}
+
+/* Organizando o display dos produtos do carrinho em telas menores de 500px */
+@media(max-width: 500px) {
+    .produto-item {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produto-item img {
+        border: 0;
+        border-radius: inherit;
+    }
+}

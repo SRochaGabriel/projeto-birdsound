@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/carrinho.css">
+    <title>Bird Sound</title>
+</head>
+<body>
+    <!-- Cabeçalho da página com um NAV-->
+    <header>
+        <nav>
+            <!-- Link que será como o logotipo ou lettering -->
+            <a href="./index.html" class="lettering">Bird Sound</a>
+
+            <button id="menu-toggle">
+                <i class="fa-solid fa-bars" id="btn-open"></i>
+                <i class="fa-regular fa-circle-xmark" id="btn-close"></i>
+            </button>
+
+            <!-- Links de navegação -->
+            <div class="nav-links">
+                <a href="./produtos.html">Produtos</a>
+                <a href="./servicos.html">Serviços</a>
+                <a href="./sobre.html">Sobre</a>
+                <a href="./carrinho.html" id="carrinho-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p></p>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <h1>Carrinho de compras</h1>
+
+        <section id="cart-area">
+            <div id="produtos-area"></div>
+            <div id="compra-info"></div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Telefone: 55 (11) 98857-1147</p>
+        <p>Endereço: Av. Brasília, 160 - Campanário, Diadema - SP</p>
+        <p>Copyright &copy; 2025 BirdSound. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Futura.</p>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/carrinho.js"></script>
+</body>
+</html>
