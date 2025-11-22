@@ -18,12 +18,12 @@ filtroForm.addEventListener('submit', e => {
 
     const formData = new FormData(e.target);
     const filtros = Object.fromEntries(formData.entries());
-
-    getProdutos(filtros);
+    localStorage.setItem('filtros', JSON.stringify(filtros));
+    window.location.reload();
 });
 
 // função que busca os produtos do JSON
-function getProdutos(filtros) {
+function getProdutos() {
     fetch('./data/prod.json', {method: 'GET'})
     .then(res => res.json())
     .then(produtos => {
@@ -33,35 +33,43 @@ function getProdutos(filtros) {
             categoria: [...new Set(produtos.map(produto => produto.categoria))],
             fabricante: [...new Set(produtos.map(produto => produto.fabricante))]
         };
+        gerarOpcoesFiltro(opcoesFiltro);
 
         // recebe lista dos produtos retornados
         let prodList = produtos;
 
+        // busca filtros do localStorage
+        const filtros = JSON.parse(localStorage.getItem('filtros'));
         // caso hajam filtros, prodList recebe os valores já filtrados
-        if (filtros) {
+        if (filtros && Object.keys(filtros).length > 0) {
             prodList = filtrarProdutos(produtos, filtros);
-        }
+            localStorage.removeItem('filtros');
 
-        if (prodList.length == 0) {
-            return produtosArea.innerHTML = '<h3>Não foi possível encontrar nenhum produto de acordo com o filtro</h3>';
+            // caso os valores filtrados retornem vazios
+            if (prodList.length == 0) {
+                return produtosArea.innerHTML = '<h3>Não foi possível encontrar nenhum produto de acordo com o filtro</h3>';
+            }
+            
+            return renderProdutos(prodList, produtosArea);
+        }
+        
+        // busca valores de itens pesquisados do localstorage
+        const produtosBuscados = JSON.parse(localStorage.getItem('produtosBuscados'));
+        // caso tenham itens buscados pela barra de pesquisa, exibe eles
+        if (produtosBuscados) {
+            localStorage.removeItem('produtosBuscados');
+            
+            if (produtosBuscados.length == 0) {
+                return produtosArea.innerHTML = '<h3>Não foi possível encontrar nenhum produto de acordo com o filtro</h3>';
+            }
+
+            return renderProdutos(produtosBuscados, produtosArea);
         }
 
         // calculando o total de páginas
         const totalPaginas = Math.ceil(prodList.length / limiteItens);
         // buscando somente os produtos da página atual
         const produtosPagina = getProdutosPagina(prodList, pagina);
-
-        gerarOpcoesFiltro(opcoesFiltro);
-
-        // busca valores de itens pesquisados
-        const produtosBuscados = JSON.parse(localStorage.getItem('produtosBuscados'));
-
-        // caso tenham itens buscados pela barra de pesquisa, exibe eles
-        if (produtosBuscados) {
-            localStorage.removeItem('produtosBuscados');
-            return renderProdutos(produtosBuscados, produtosArea);
-        }
-
         gerarPaginacao(totalPaginas);
 
         // caso não tenham filtros de busca, retorna os produtos sem filtragem
