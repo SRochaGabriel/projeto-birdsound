@@ -15,32 +15,36 @@ window.onload = checaCarrinho();
 searchForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    const searchValue = document.querySelector('#search').value.toLowerCase();
+    let searchValue = document.querySelector('#search').value.toLowerCase().split(' ');
 
-    // buscando os produtos para filtrar
-    fetch('./data/prod.json', {method: 'GET'})
-    .then(res => res.json())
-    .then(produtos => {
-        const produtosBuscados = filtrarPorBusca(produtos, searchValue);
-        localStorage.setItem('produtosBuscados', JSON.stringify(produtosBuscados));
-        window.location.href = './produtos.html';
-    });
+    // removendo valores vazios ex.: ('');
+    searchValue = searchValue.filter(valor => valor != '');
+
+    if (searchValue.length > 0) {
+        // buscando os produtos para filtrar
+        fetch('./data/prod.json', {method: 'GET'})
+        .then(res => res.json())
+        .then(produtos => {
+            const produtosBuscados = filtrarPorBusca(produtos, searchValue);
+            localStorage.setItem('produtosBuscados', JSON.stringify(produtosBuscados));
+            window.location.href = './produtos.html';
+        });
+    }
 });
 
 // função que filtra a lista de produtos pelo texto na barra de pesquisa
 function filtrarPorBusca(produtos, filtro) {
     const camposBusca = ['nome', 'tipo', 'categoria', 'fabricante'];
 
-    // passa por cada campo em 'camposBusca', se encontrar um match com o valor pesquisado retorna o produto, caso não encontre nenhum match, não retorna
+    // função de filtro
     return produtos.filter(produto => {
-        for (let item of camposBusca) {
-            if (produto[item].toLowerCase().includes(filtro)) {
-                return true;
-            }
-        }
 
-        return false;
-    })
+        // garante que a função interna de every será aplicada para todos os campos de busca. retorna true se pelo menos um deles tiver um retorno true
+        return camposBusca.some(campo => {
+            // aqui, retorna true somente se todos os itens do array 'filtro' estiverem incluídos no campo atual em 'produto'
+            return filtro.every(termo => produto[campo].toLowerCase().includes(termo));
+        });
+    });
 }
 
 // renderiza os produtos na página

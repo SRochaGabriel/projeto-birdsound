@@ -245,7 +245,7 @@ select {
     font-size: 1rem;
 }
 
-/* Barra de pesquisa */
+/* ============== Barra de pesquisa ===============*/
 #search-bar {
     flex: 1;
     display: flex;
@@ -267,6 +267,7 @@ select {
     background-color: transparent;
     color: var(--secondary-color);
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 /* ======= Definições para os cards de produto ====== */
