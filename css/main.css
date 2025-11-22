@@ -35,6 +35,7 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     padding: 1em 2em;
 }
 
@@ -67,7 +68,7 @@ nav a {
 .nav-links #carrinho-link p {
     font-weight: 600;
     position: absolute;
-    top: -20px;
+    top: -15px;
     left: 22px;
 }
 
@@ -158,6 +159,13 @@ section h2 {
     }
 }
 
+/* Regras que serão ativadas em telas menores de 425px */
+@media(max-width:425px) {
+    .lettering {
+        width: 100%;
+    }
+}
+
 /* Definições para o rodapé */
 footer {
     background-color: var(--primary-color);
@@ -235,6 +243,30 @@ select {
     border-radius: 5px;
     padding: 5px;
     font-size: 1rem;
+}
+
+/* Barra de pesquisa */
+#search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#search-bar #search {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+}
+
+#search-bar button {
+    border: 0;
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
 }
 
 /* ======= Definições para os cards de produto ====== */

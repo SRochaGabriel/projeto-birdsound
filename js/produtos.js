@@ -52,6 +52,16 @@ function getProdutos(filtros) {
         const produtosPagina = getProdutosPagina(prodList, pagina);
 
         gerarOpcoesFiltro(opcoesFiltro);
+
+        // busca valores de itens pesquisados
+        const produtosBuscados = JSON.parse(localStorage.getItem('produtosBuscados'));
+
+        // caso tenham itens buscados pela barra de pesquisa, exibe eles
+        if (produtosBuscados) {
+            localStorage.removeItem('produtosBuscados');
+            return renderProdutos(produtosBuscados, produtosArea);
+        }
+
         gerarPaginacao(totalPaginas);
 
         // caso não tenham filtros de busca, retorna os produtos sem filtragem

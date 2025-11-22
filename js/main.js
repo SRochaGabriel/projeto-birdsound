@@ -1,5 +1,6 @@
 const toggleMenu = document.querySelector('#menu-toggle');
 const navLinksContainer = document.querySelector('.nav-links');
+const searchForm = document.querySelector('#search-bar')
 
 // Lógica para exibir/esconder a navbar
 toggleMenu.addEventListener('click', () => {
@@ -9,6 +10,38 @@ toggleMenu.addEventListener('click', () => {
 
 // chama a função que verifica o carrinho
 window.onload = checaCarrinho();
+
+// função de pesquisa
+searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const searchValue = document.querySelector('#search').value.toLowerCase();
+
+    // buscando os produtos para filtrar
+    fetch('./data/prod.json', {method: 'GET'})
+    .then(res => res.json())
+    .then(produtos => {
+        const produtosBuscados = filtrarPorBusca(produtos, searchValue);
+        localStorage.setItem('produtosBuscados', JSON.stringify(produtosBuscados));
+        window.location.href = './produtos.html';
+    });
+});
+
+// função que filtra a lista de produtos pelo texto na barra de pesquisa
+function filtrarPorBusca(produtos, filtro) {
+    const camposBusca = ['nome', 'tipo', 'categoria', 'fabricante'];
+
+    // passa por cada campo em 'camposBusca', se encontrar um match com o valor pesquisado retorna o produto, caso não encontre nenhum match, não retorna
+    return produtos.filter(produto => {
+        for (let item of camposBusca) {
+            if (produto[item].toLowerCase().includes(filtro)) {
+                return true;
+            }
+        }
+
+        return false;
+    })
+}
 
 // renderiza os produtos na página
 export function renderProdutos(produtos, produtosArea) {
