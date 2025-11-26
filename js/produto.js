@@ -43,6 +43,10 @@ function getProduto(id) {
                     <h2>${produto.nome}</h2>
                     <p>Fabricante: <span>${produto.fabricante}</span></p>
                 </div>
+                
+                <p>
+                    ${produto.desc}
+                </p>
 
                 <div>
                     <h2 id="valor">${valor}</h2>
