@@ -16,7 +16,7 @@ function getProdutos() {
     }
 
     produtos.forEach(produto => {
-        listaItens += `- *${produto.nome}* | *ID: ${produto.id}* | *Quantidade: ${produto.quantidade}*  
+        listaItens += `- *${produto.nome}* | *ID: ${produto.codigo}* | *Quantidade: ${produto.quantidade}*  
 `;
 
         const valor = produto.valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
@@ -156,7 +156,7 @@ function renderFinal(produtos) {
         const mensagemPersonalizada = `Olá, gostaria de registrar meu pedido e iniciar o atendimento!  
 Produtos:  
 ${listaItens}Valor:  
-- *R$ ${valorFinal}*  
+- *${valorFinal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}*  
 Parcelamento:  
 - *${document.querySelector('#parcelas').value}*`;
 
