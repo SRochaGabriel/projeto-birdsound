@@ -55,7 +55,7 @@
 .info-quantidade button {
     border: 0;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: #fff;
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: 600;
