@@ -42,7 +42,7 @@ nav {
 /* Definições para os links do nav */
 nav a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #fff;
 }
 
 /* Definições para o nome da loja sendo exibido no header */
@@ -193,13 +193,13 @@ hr {
     border: 0;
     border-radius: 20px;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: #fff;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 .main-btn:hover {
-    background-color: var(--secondary-color);
+    background-color: #fff;
     color: var(--primary-color);
     box-shadow: 0 0 2px #333;
 }
@@ -265,7 +265,7 @@ select {
 #search-bar button {
     border: 0;
     background-color: transparent;
-    color: var(--secondary-color);
+    color: #fff;
     font-size: 1.2rem;
     cursor: pointer;
 }
@@ -307,7 +307,7 @@ select {
     position: fixed;
     z-index: 1;
     background-color: #000;
-    color: var(--secondary-color);
+    color: #fff;
     padding: 10px;
     border-radius: 50px;
     font-size: 1.2rem;
