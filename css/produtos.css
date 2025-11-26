@@ -83,7 +83,7 @@
     inset-inline-start: calc(var(--line-offset) * -1);
 }
 
-/* Classe para parágrafos com a descrição dos produtos */
-.desc {
+/* Tamanho para os parágrafos da página */
+p {
     font-size: 1.1rem;
 }
