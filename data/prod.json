@@ -430,5 +430,53 @@
         "tipo": "Bloqueador veicular",
         "categoria": "Alarme e Segurança",
         "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0556886_bloqueador-automotivo-blocktron-blk002b.jpeg"
+    },
+    {
+        "id": 37,
+        "nome": "Sensor de Estacionamento - KX3/GALTEC KXS245A",
+        "valor": 125.90,
+        "parcelas": 1,
+        "desc": "O sensor de estacionamento verifica o espaço atrás do veículo durante os procedimentos de marcha ré e avisa acusticamente contra os obstáculos, que são detectados atrás do dispositivo. Ao engatar a marcha ré o display informará a metragem do obstáculo iniciando na cor azul, verde até vermelho. Possui Cápsulas Emborrachadas, modelo mais indicado aos para-choques de metal pela sua facilidade e segurança na instalação.",
+        "codigo": "KXS245A",
+        "fabricante": "KX3/GALTEC",
+        "tipo": "Sensor de estacionamento",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0520712_sensor-de-estacionamento-kx3galtec-kxs245a.jpeg"
+    },
+    {
+        "id": 38,
+        "nome": "Sensor de Estacionamento Preto 4 Sensores/Pontos com Display - SOLOCAR SL290001",
+        "valor": 79.90,
+        "parcelas": 1,
+        "desc": "Sensor de estacionamento SL290001 da SOLOCAR com alerta sonoro, 12V DC e display. Acessório ideal para evitar batidas e riscos na traseira ao manobrar e estacionar.",
+        "codigo": "SL290001",
+        "fabricante": "SOLOCAR",
+        "tipo": "Sensor de estacionamento",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0552367_sensor-de-estacionamento-preto-4-sensorespontos-com-display-solocar-sl290001.jpeg"
+    },
+    {
+        "id": 39,
+        "nome": "Sensor de Estacionamento Prata 4 Sensores/Pontos com Display - SOLOCAR SL290002",
+        "valor": 79.90,
+        "parcelas": 1,
+        "desc": "Sensor de estacionamento SL290002 da SOLOCAR. Ideal para evitar batidas e riscos na traseira ao manobrar e estacionar.",
+        "codigo": "SL290002",
+        "fabricante": "SOLOCAR",
+        "tipo": "Sensor de estacionamento",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0559932_sensor-de-estacionamento-prata-4-sensorespontos-com-display-solocar-sl290002.jpeg"
+    },
+    {
+        "id": 40,
+        "nome": "Sensor de Estacionamento Emborrachado 4 Sensores com Display Digital Sonoro - KX3/GALTEC KXS205A",
+        "valor": 134.90,
+        "parcelas": 1,
+        "desc": "Este sensor é acionado automaticamente ao engatar a marcha ré, ele possui display de Led com marcações de distância e cores que se alteram conforme a proximidade do objeto e um aviso sonoro em 4 estágios. Possui cápsulas emborrachadas que são facilmente fixadas no para-choque do veículo, sistema de distância anti-impacto, display numérico, aviso sonoro com liga/desliga, a prova d'água, resistente a alta temperatura e com central digital com sistema de travamento. Ao engatar a marcha ré o display informará a metragem do obstáculo iniciando na cor azul, verde até vermelho.",
+        "codigo": "KXS205A",
+        "fabricante": "KX3/GALTEC",
+        "tipo": "Sensor de estacionamento",
+        "categoria": "Alarme e Segurança",
+        "imagem": "https://stgecomm.blob.core.windows.net/imagesprod2/0467114_sensor-de-estacionamento-emborrachado-4-sensores-com-display-digital-sonoro-galtec-kxs205a.jpeg"
     }
 ]
