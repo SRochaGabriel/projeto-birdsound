@@ -44,7 +44,7 @@ function getProduto(id) {
                     <p>Fabricante: <span>${produto.fabricante}</span></p>
                 </div>
                 
-                <p>
+                <p class="desc">
                     ${produto.desc}
                 </p>
 
