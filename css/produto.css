@@ -46,6 +46,6 @@ p {
 }
 
 .desc {
-    height: 10rem;
+    max-height: 10rem;
     overflow: auto;
 }
