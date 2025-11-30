@@ -160,6 +160,6 @@ ${listaItens}Valor:
 Parcelamento:  
 - *${document.querySelector('#parcelas').value}*`;
 
-        window.location.href = `https://api.whatsapp.com/send?phone=5511988571147&text=${encodeURIComponent(mensagemPersonalizada)}`;
+        window.open(`https://api.whatsapp.com/send?phone=5511988571147&text=${encodeURIComponent(mensagemPersonalizada)}`, "_blank");
     });
 }
