@@ -18,7 +18,7 @@
 /* Definições para o body */
 body {
     background-color: var(--secondary-color);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,6 +27,9 @@ body {
 /* Definições para o header */
 header {
     background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 /* Definições para o nav */
